@@ -1,0 +1,11 @@
+body{
+    color: White;
+    background-image: url("background3.jpg");
+}
+#wrap{
+    width: 960px;
+    margin: auto;
+    padding: 200px;
+}
+#header h1{
+}

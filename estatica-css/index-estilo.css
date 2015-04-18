@@ -1,0 +1,38 @@
+body{
+    background-image: url("background3.jpg");
+    font-family: sans-serif;
+}
+#wrap{
+    width: 960px;
+    margin: auto;
+    padding-top: 100px;
+    padding-left: 20px;
+    color: White;
+}
+#header{
+}
+#header h1{
+}
+#content{
+    padding: 10px;
+}
+#list{
+    width: 200px;
+}
+#list ul{
+    list-style: none;
+    padding: 0px;
+}
+#list ul li{
+    padding-left: 0px;
+    list-style: none;
+}
+a{
+    font-size: large;
+    text-decoration: none;
+    color: darkred;
+}
+a:hover{
+    color: darkgreen;
+    text-decoration: underline;
+}

@@ -1,0 +1,25 @@
+body{
+    color: White;
+    background-image: url("background3.jpg");
+    font-family: sans-serif;
+}
+#wrap{
+    padding: 10px 20px;
+    width: 875px;
+    margin: auto;
+}
+
+#content{
+    float: left;
+}
+#content h1{
+    padding-top: 200px;
+    padding-left: 50px;
+}
+#form{
+    padding-top: 250px;
+    float: right;
+}
+footer{
+    clear: both;
+}
