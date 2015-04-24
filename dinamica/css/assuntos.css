@@ -1,5 +1,5 @@
 #learned{
-width: 500px;
+width: 50%;
 float: right;
     padding-top: 70px;
 }
@@ -14,7 +14,7 @@ h1{
 #toLearn{
     padding-top: 70px;
     color: black;
-    width: 500px;
+    width: 50%;
     float: left;
 }
 #toLearn h1{
