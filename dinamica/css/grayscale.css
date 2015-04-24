@@ -37,11 +37,15 @@ p {
 }
 form{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #000;
+    color: green;
+    align-content: center;
 }
-label{
-    color: white;
+
+
+#temas{
+    height: 300px;
 }
+
 
 @media(min-width:768px) {
     p {

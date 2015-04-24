@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="si1App" lang="en">
+	<head>
+    	<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/grayscale.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/assuntos.css">
+   		<!-- Latest compiled and minified CSS -->
+   		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+   		<!-- Optional theme -->
+   		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+        <!-- Angular JS -->
+        <script src = "js/angular.min.js"></script>
+        <!-- Jquery -->
+        <script src = "js/jquery-2.1.1.min.js"></script>
+
+   		<title>Tutorial AngularJS - episódio 3 - MVC</title>
+   	</head>
+
+	<!-- define um controller para este trecho da tela -->
+	<body ng-controller="si1Controller">
+
+    <header>
+        <a class="navbar-brand page-scroll" href="index.html">
+            <i class="fa fa-play-circle"></i>  <span class="light">INÍCIO</span>
+        </a>
+        <a class="navbar-brand page-scroll" href="index.html#contact">
+            <span class="light">CONTATO</span>
+        </a>
+        <a class="navbar-brand page-scroll" href="index.html#download">
+            <span class="light">SOBRE</span>
+        </a>
+        <br>
+    </header>
+
+    <h1>OBRIGADO POR SE CADASTRAR NA DISCIPLINA!</h1>
+
+    <div class="container theme-showcase">
+        <div id="toLearn">
+            <h3>Temas a Aprender</h3>
+
+            <!-- atribui método para submit -->
+            <form ng-submit="addToLearn()" class="form-wrapper cf">
+                <input type="text" ng-model="toLearnItem" class="form-control ng-pristine ng-invalid ng-invalid-required" placeholder="TEMAS A APRENDIDOS" required="" />
+                <button type="submit" value="Incluir" class="btn btn-default btn-lg" ng-onclic="addToLearn()" >Incluir</button>
+                <!-- <input type="submit" value="Incluir" class="btn btn-default btn-lg" /> -->
+            </form>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="toLearnItem in toLearn">{{toLearnItem.name}}
+                    <a class="btn pull-right btn-xs move" ng-click="moveToLearn($index)">mover-></a>
+                    <a class="btn pull-right btn-xs remove" ng-click="removeToLearn($index)">remover</a>
+                </li>
+            </ul>
+        </div>
+        <div id="learned">
+            <h3>Temas Aprendidos</h3>
+            <!-- atribui método para submit -->
+            <form ng-submit="addLearned(learnedItem)" class="form-wrapper cf">
+                <input type="text" ng-model="learnedItem" class="form-control ng-pristine ng-invalid ng-invalid-required" placeholder="TEMAS APRENDIDOS" required="">
+                <button type="submit" value="Incluir" class="btn btn-default btn-lg">Incluir</button>
+            </form>
+            <ul class="list-group" class="form-wrapper cf">
+                <li class="list-group-item" ng-repeat="learnedItem in learned">{{learnedItem.name}}
+                    <a class="btn pull-right btn-xs move" ng-click="moveLearned($index)"> <-mover </a>
+                    <a class="btn pull-right btn-xs remove" ng-click="removeLearned($index)">remover</a>
+                </li>
+            </ul>
+
+        </div>
+
+   		<script src="js/si1Lab1.js"></script>
+
+	</div>
+</body>
+</html>
